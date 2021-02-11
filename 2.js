@@ -28,7 +28,7 @@
 
 // Your Code Here
 var tipeBensin = 'premium'
-var uang = 0
+var uang = 15000
 var liter = 0
 
 if (!tipeBensin || !uang) {
@@ -47,5 +47,11 @@ if (!tipeBensin || !uang) {
         default:
             break;
     }
-    console.log('Mobil anda telah terisi solar sebanyak ' + liter.toFixed(1) + ' lt');
+    if ((liter * 10) % 10 == 0) {
+        // if (liter.isInteger(liter)) {
+        liter = liter.toFixed(0);
+    } else {
+        liter = liter.toFixed(1);
+    }
+    console.log('Mobil anda telah terisi ' + tipeBensin + ' sebanyak ' + liter + ' lt');
 }

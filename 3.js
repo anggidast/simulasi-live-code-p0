@@ -21,14 +21,29 @@ var input = 'icha@hacktiv8.com'
 // var input = 'adastariana@gmail.com'
 
 // Your code here
-var at = 0
-var dot = 0
+// var at = 0
+// var dot = 0
+// for (var i = 0; i < input.length; i++) {
+//     if (input[i] == '@') {
+//         at = i;
+//     }
+//     if (input[i] == '.') {
+//         dot = i;
+//     }
+// }
+// console.log('Your email provider is ' + input.slice(at + 1, dot));
+
+// alternatif dengan menggunakan flagging
+var flag = false
+var output = ''
 for (var i = 0; i < input.length; i++) {
-    if (input[i] == '@') {
-        at = i;
+    if (input[i - 1] == '@') {
+        flag = true
+    } else if (input[i] == '.') {
+        flag = false;
     }
-    if (input[i] == '.') {
-        dot = i;
+    if (flag == true) {
+        output += input[i]
     }
 }
-console.log('Your email provider is ' + input.slice(at + 1, dot));
+console.log('Your email provider is ' + output);
