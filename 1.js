@@ -27,5 +27,25 @@ o-o-o
 
 
 */
-var total = 3
+var total = 10
+
 // Your Code Here
+for (var i = 0; i < total; i++) {
+    var temp = ''
+    for (var j = 0; j < total; j++) {
+        if (i % 2 == 0) {
+            if (j % 2 == 0) {
+                temp += 'o'
+            } else {
+                temp += '-'
+            }
+        } else {
+            if (j % 2 == 0) {
+                temp += '-'
+            } else {
+                temp += 'o'
+            }
+        }
+    }
+    console.log(temp);
+}

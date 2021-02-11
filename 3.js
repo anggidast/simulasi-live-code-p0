@@ -18,5 +18,17 @@
  */
 
 var input = 'icha@hacktiv8.com'
+// var input = 'adastariana@gmail.com'
 
 // Your code here
+var at = 0
+var dot = 0
+for (var i = 0; i < input.length; i++) {
+    if (input[i] == '@') {
+        at = i;
+    }
+    if (input[i] == '.') {
+        dot = i;
+    }
+}
+console.log('Your email provider is ' + input.slice(at + 1, dot));

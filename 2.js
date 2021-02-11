@@ -27,3 +27,25 @@
  */
 
 // Your Code Here
+var tipeBensin = 'premium'
+var uang = 0
+var liter = 0
+
+if (!tipeBensin || !uang) {
+    console.log('Tidak ada tipe bensin dan uang');
+} else {
+    switch (tipeBensin) {
+        case 'solar':
+            liter = uang / 5000;
+            break;
+        case 'premium':
+            liter = uang / 7500;
+            break;
+        case 'pertamax':
+            liter = uang / 10000;
+            break;
+        default:
+            break;
+    }
+    console.log('Mobil anda telah terisi solar sebanyak ' + liter.toFixed(1) + ' lt');
+}
