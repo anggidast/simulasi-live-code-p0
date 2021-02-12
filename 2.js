@@ -28,7 +28,7 @@
 
 // Your Code Here
 var tipeBensin = 'premium'
-var uang = 15000
+var uang = 12000
 var liter = 0
 
 if (!tipeBensin || !uang) {
@@ -47,8 +47,8 @@ if (!tipeBensin || !uang) {
         default:
             break;
     }
-    if ((liter * 10) % 10 == 0) {
-        // if (liter.isInteger(liter)) {
+    // if ((liter * 10) % 10 == 0) {
+    if (Number.isInteger(liter)) {
         liter = liter.toFixed(0);
     } else {
         liter = liter.toFixed(1);
